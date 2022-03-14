@@ -22,16 +22,11 @@ function operacion(id){
         case '+':
             campo2.value = parseInt(campo.value) + parseInt(campo1.value)
             break;
-
         case '-':
             campo2.value = parseInt(campo.value) - parseInt(campo1.value)
             break;
-
         case '*':
             campo2.value = parseInt(campo.value) * parseInt(campo1.value)
-            break;
-        case '*':
-            campo2.value = parseInt(campo.value) / parseInt(campo1.value)
             break;
         case '/':
             campo2.value = (parseInt(campo.value) / parseInt(campo1.value)).toFixed(2);
