@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora algo compleja</title>
+    <script type="text/javascript" src="ejercicio6.js"></script>
+    <link rel="stylesheet" type="text/css" href="ejercicio6.css">
+</head>
+<body>
+    <h1>Calculadora</h1>
+    <br>
+    <table id="tabla">
+        <tbody>
+            <tr><td colspan="4"><input id="texto" type="text" value="" readonly></td></tr>
+            <br>
+            <tr id="fila1">
+                <td><button id = "1" onclick="presionar(this.id)" value="1">1</button></td>
+                <td><button id = "2" onclick="presionar(this.id)" value="2">2</button></td>
+                <td><button id = "3" onclick="presionar(this.id)" value="3">3</button></td>
+                <td><button id = "+" onclick="presionar(this.id)" value="+">+</button></td>
+            </tr>
+            <tr id="fila2">
+                <td><button id = "4" onclick="presionar(this.id)" value="4">4</button></td>
+                <td><button id = "5" onclick="presionar(this.id)" value="5">5</button></td>
+                <td><button id = "6" onclick="presionar(this.id)" value="6">6</button></td>
+                <td><button id = "-" onclick="presionar(this.id)" value="-">-</button></td>
+            </tr>
+            <tr id="fila3">
+                <td><button id = "7" onclick="presionar(this.id)" value="7">7</button></td>
+                <td><button id = "8" onclick="presionar(this.id)" value="8">8</button></td>
+                <td><button id = "9" onclick="presionar(this.id)" value="9">9</button></td>
+                <td><button id = "*" onclick="presionar(this.id)" value="*">*</button></td>
+            </tr>
+            <tr id="fila4">
+                <td><button id = "C" onclick="presionar(this.id)" value="C">C</button></td>
+                <td><button id = "0" onclick="presionar(this.id)" value="0">0</button></td>
+                <td><button id = "/" onclick="presionar(this.id)" value="/">/</button></td>
+                <td><button id = "%" onclick="presionar(this.id)" value="%">%</button></td>
+            </tr>
+            <tr>
+                <td id="fila5" colspan="4"><button id = "igual" onclick="presionar(this.id)" value="igual">=</button></td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
