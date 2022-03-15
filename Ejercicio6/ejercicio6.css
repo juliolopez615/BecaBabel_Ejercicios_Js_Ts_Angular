@@ -1,0 +1,24 @@
+#tabla{
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(115, 162, 184);
+    width:30%;
+    
+}
+
+button{
+    width:70%;
+}
+#texto{
+    margin-bottom: 2%;
+    width: 95%;
+}
+h1{
+    text-align: center;
+    margin-top: 5%;
+}
+#fila1, #fila2, #fila3, #fila4,#fila5{
+    text-align: center;
+    margin-top: 50px;
+}
+
