@@ -24,7 +24,7 @@ function factorial(num:number):number{
     
 }
 
-//Ejercicio 1
+//Ejercicio 7
 var notas:number[] = [5, 7, 8]
 var nota_final:number= (notas[0]*0.55) + (notas[1]*0.30) + (notas[2]*0.15)
 console.log(nota_final)
