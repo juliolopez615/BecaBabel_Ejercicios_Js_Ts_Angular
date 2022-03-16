@@ -102,10 +102,10 @@ class Jugador{
     }
 
     set _historial(historial:Historial){
-        this.historial._id = historial._id;
-        this.historial._numGoles = historial._numGoles;
-        this.historial._numAmarillas = historial._numAmarillas;
-        this.historial._numRojas = historial._numRojas;
+        this.historial.id = historial._id;
+        this.historial.numGoles = historial._numGoles;
+        this.historial.numAmarillas = historial._numAmarillas;
+        this.historial.numRojas = historial._numRojas;
     }
 
 }
