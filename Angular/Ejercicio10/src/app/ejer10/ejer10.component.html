@@ -1,0 +1,23 @@
+<div>
+  <label for="campo1">Introduzca un numero: </label>
+  <input id="campo1" type="text" [(ngModel)]="value">
+
+  <br>
+  <br>
+
+  <label for="campo2">Introduzca un numero: </label>
+  <input id="campo2" type="text" [(ngModel)]="value2">
+
+  <br>
+  <br>
+
+  <button *ngFor="let op of listOperaciones; index as i" [id]="simbolos[i]" (click)="operar($event.target)">
+    {{op}}
+  </button>
+
+  <br>
+  <br>
+  
+  <label for="campo">Resultado: </label>
+  <input id="campo" type="text" [value]="resultado">
+</div>
