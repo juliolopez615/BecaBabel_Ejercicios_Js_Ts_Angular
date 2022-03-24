@@ -1,0 +1,14 @@
+<app-menu></app-menu>
+<div class="cont">
+    <h3>Login</h3>
+    <div class="user">
+        <label for="usuario">Usuario: </label>
+        <input id="usuario" type="text" display="Nombre de usuario" [(ngModel)]="user">
+    </div>
+    <br>
+    <div class="pw">
+        <label for="pw">Password: </label>
+        <input id="usuario" type="password" display="Contraseña" [(ngModel)]="password">
+    </div>
+    <button (click)="validar()">Login</button>
+</div>

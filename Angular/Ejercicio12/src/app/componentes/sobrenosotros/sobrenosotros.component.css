@@ -1,0 +1,12 @@
+div{
+    background-color: white;
+}
+
+.cont1,.cont2{
+    display: inline-block;
+    width: 500px;
+}
+.cont1{
+    margin-right: 50px;
+    margin-left: 50px;
+}

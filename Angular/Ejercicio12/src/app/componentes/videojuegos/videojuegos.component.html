@@ -1,0 +1,8 @@
+<app-menu></app-menu>
+<h2>Welcome back {{nombre}} !!</h2>
+<h2>Here is a list with our recent videogames titles:</h2>
+<app-vjrow 
+    *ngFor="let v of vlist" 
+    [videojuego]="v"
+>
+</app-vjrow >

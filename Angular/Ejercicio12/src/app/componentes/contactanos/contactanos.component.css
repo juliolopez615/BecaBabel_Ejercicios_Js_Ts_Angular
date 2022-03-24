@@ -1,0 +1,12 @@
+div{
+    background-color: white;
+}
+
+img{
+    width: 400px;
+    border: 10px solid black;
+}
+
+h1,h3,img{
+    margin-left: 2%;
+}

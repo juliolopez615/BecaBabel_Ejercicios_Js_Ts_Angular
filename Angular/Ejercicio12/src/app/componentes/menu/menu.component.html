@@ -1,0 +1,5 @@
+<nav>
+  <h3 *ngFor="let m of menu; index as i" [id]="m" (click)="operar($event.target)">
+    {{m}}
+  </h3>
+</nav> 
