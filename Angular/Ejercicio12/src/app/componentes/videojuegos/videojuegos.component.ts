@@ -19,13 +19,19 @@ export class VideojuegosComponent implements OnInit {
     if(Usuario.token == 0){
       alert("Necesita estar Logeado para acceder a la lista de videojuegos")
       this.router.navigate(['/login'])
-
     }
+    
     this.vlist.push(new Videojuego(1,"Uncharted","Naughty Dog","./assets/uncharted.png", 8.5))
     this.vlist.push(new Videojuego(2,"Metal Gear Solid", "Konami", "./assets/metalgear.png", 8))
     this.vlist.push(new Videojuego(3,"Bloodborne", "JapanStudio", "./assets/bloodborne.jpg", 7.5))
     this.vlist.push(new Videojuego(4,"Assassin's Creed", "Ubisoft", "./assets/assassins.jpg", 9))
-    this.nombre = _route.snapshot.params["nombre"]
+
+    if(Usuario.userNAme == ""){
+      Usuario.userNAme = _route.snapshot.params["nombre"]
+      this.nombre = Usuario.userNAme
+    }else{
+      this.nombre = Usuario.userNAme
+    }
   }
 
   ngOnInit() {

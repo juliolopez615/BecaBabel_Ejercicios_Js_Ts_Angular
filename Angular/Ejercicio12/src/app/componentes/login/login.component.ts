@@ -16,6 +16,7 @@ export class LoginComponent implements OnInit {
 
   constructor(private router:Router) {
     Usuario.token = 0
+    Usuario.userNAme = ""
     this._userList.push(new Usuario("julio", "pass1234"))
     this._userList.push(new Usuario("julio", "otra1234"))
     this._userList.push(new Usuario("felix", "avenger"))

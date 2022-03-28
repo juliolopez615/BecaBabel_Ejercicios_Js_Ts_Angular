@@ -1,6 +1,7 @@
 
  export class Usuario {
     static token = 0
+    static userNAme = ""
     constructor(private _usuario: string, private _password: string) {
     
     }
