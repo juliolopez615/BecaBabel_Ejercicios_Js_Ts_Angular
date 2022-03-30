@@ -13,7 +13,8 @@ export class FormVideojuegosComponent implements OnInit {
   public comp = ""
   public valoracion: number|string = ""
   public botones = ["introducir", "modificar", "eliminar", "vaciar"]
-  public disable = false
+  public disable = true
+  
 
   constructor() { 
     //Lo he iniciado directamente en el atributo
@@ -23,20 +24,46 @@ export class FormVideojuegosComponent implements OnInit {
   }
 
   public introducir(){
+
+    if(this.titulo == ""|| this.comp == ""|| this.valoracion == ""){
+      alert("Rellene todos los campos :)")
+      return
+    }
+    
+    Videojuego.cont++
+    this.id = Videojuego.cont
+
     let temp = new Videojuego(this.id,this.titulo, this.comp, this.valoracion)
     this.vlist.push(temp)
   }
 
   public modificar(){
-
+    
+    for(let i=0; i<this.vlist.length; i++){
+      if(this.id == this.vlist[i].id){
+        this.vlist[i].titulo = this.titulo
+        this.vlist[i].comp = this.comp
+        this.vlist[i].valoracion = this.valoracion
+      }
+    }
   }
 
   public eliminar(){
+    let vlistTemp:Videojuego[] = []
+    
+    for(let i=0; i<this.vlist.length; i++){
+      if(!(this.id == this.vlist[i].id)){
+        vlistTemp.push(this.vlist[i])
+      }
+    }
 
+    this.vlist = []
+    this.vlist = vlistTemp.slice();
+    
   }
 
   public vaciar(){
-
+    
     this.id = ""
     this.titulo = ""
     this.comp = ""
@@ -45,7 +72,11 @@ export class FormVideojuegosComponent implements OnInit {
   }
 
   public seleccionar(v:any){
-
+    
+    this.id = v.id
+    this.titulo = v.titulo
+    this.comp = v.comp
+    this.valoracion = v.valoracion
   }
 
   public operar(target:any){
@@ -65,7 +96,7 @@ export class FormVideojuegosComponent implements OnInit {
         this.vaciar()
         break;
       default:
-        console.log("Algo ha ido mal")
+        console.log("Algo ha ido mal >.<")
         break;
     }
 

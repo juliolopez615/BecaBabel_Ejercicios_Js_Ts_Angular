@@ -4,6 +4,7 @@ export class Videojuego{
     private _titulo = "";
     private _comp = "";
     private _valoracion:number|string = 0;
+    public static cont = 2
     
     public get id() {
         return this._id;

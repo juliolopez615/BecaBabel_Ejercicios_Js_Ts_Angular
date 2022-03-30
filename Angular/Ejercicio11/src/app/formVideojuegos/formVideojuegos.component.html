@@ -22,20 +22,20 @@
   <br>
   <label for="titulov">TITULO</label>
   <div>
-      <input id="titulov" type="text" [disabled]="disable" [(ngModel)]="titulo"/>
+      <input id="titulov" type="text" [(ngModel)]="titulo"/>
       
   </div>
 
   <br>
   <label for="compv">COMPAÑIA</label>
   <div>
-      <input id="compv" type="text" [disabled]="disable" [(ngModel)]="comp"/>
+      <input id="compv" type="text" [(ngModel)]="comp"/>
   </div>
 
   <br>
   <label for="valorv">VALORACION</label>
   <div>
-      <input id="valorv" type="text" [disabled]="disable" [(ngModel)]="valoracion"/>
+      <input id="valorv" type="text"  [(ngModel)]="valoracion"/>
       
   </div>
 
@@ -51,7 +51,7 @@
     <tbody>
         <!-- 
             Recorremos la lista, y si pulsamos en alguna fila, ejecutaremos el metodo
-            "seleccionar", pasandole el heroe seleccionado
+            "seleccionar", pasandole el videojuego seleccionado
         -->
         <tr *ngFor="let v of vlist; index as i" (click)="seleccionar(v)">
             <td>{{ v.id }}</td>
